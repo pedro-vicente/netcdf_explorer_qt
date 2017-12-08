@@ -1,0 +1,39 @@
+// -*-C++-*-
+// Purpose: CDL file to generate netCDF test file 
+// Usage:
+// ncgen -k netCDF-4 -b -o test_04.nc test_04.cdl
+// Primitive Data Types
+//             char characters
+//             byte 8-bit data
+//             short     16-bit signed integers
+//             int  32-bit signed integers
+//             long (synonymous with int)
+//             int64     64-bit signed integers
+//             float     IEEE single precision floating point (32 bits)
+//             real (synonymous with float)
+//             double    IEEE double precision floating point (64 bits)
+//             ubyte     unsigned 8-bit data
+//             ushort    16-bit unsigned integers
+//             uint 32-bit unsigned integers
+//             uint64    64-bit unsigned integers
+//             string    arbitrary length strings
+
+netcdf test_04 {
+ variables:
+ float one;
+ // typed variable attributes
+ char one:char_attr = "test";
+ byte one:byte_attr = -1;
+ short one:short_attr = 1, 2;
+ int one:int_attr = 1;
+ long one:long_attr = -1;
+ int64 one:int64_attr = -1, -2;
+ byte one:byte_attr = 1;
+ float one:float_attr = 0., 5000.;
+ double one:double_attr = -9999.;
+ ubyte one:ubyte_attr = 1;
+ ushort one:ushort_attr = 1, 2;
+ uint one:uint_attr = 1;
+ uint64 one:uint64_attr = 1, 2;
+ string one:string_attr = "geopotential meters";
+}
